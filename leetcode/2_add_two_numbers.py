@@ -67,12 +67,18 @@ def run():
 
 
 if __name__ == '__main__':
-    ptr = []
-    for i in range(5):
-        num = int(raw_input('please input a number:\n'))
-        ptr.append(num)
-    print(ptr)
-    ptr.reverse()
-    print(ptr)
+
+    # 创建l1和l2链表
+    l1 = ListNode(2)
+    l1.next = ListNode(4)
+    l1.next.next = ListNode(3)
+
+    l2 = ListNode(5)
+    l2.next = ListNode(6)
+    l2.next.next = ListNode(4)
+
+    # 执行合并
+    s = Solution()
+    s.addTwoNumbers(l1, l2)
 
 
